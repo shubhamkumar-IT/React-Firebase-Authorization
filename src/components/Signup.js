@@ -5,6 +5,11 @@ import { Link, useHistory } from "react-router-dom";
 
 export default function Signup() {
   const emailRef = useRef();
+  const nameRef = useRef();
+
+  const phoneRef = useRef();
+  const dobRef = useRef();
+
   const passwordRef = useRef();
   const passwordConfirmRef = useRef();
   const { signup } = useAuth();
@@ -41,6 +46,18 @@ export default function Signup() {
             <Form.Group id="email">
               <Form.Label>Email</Form.Label>
               <Form.Control type="email" ref={emailRef} required />
+            </Form.Group>
+            <Form.Group id="name">
+              <Form.Label>Full Name</Form.Label>
+              <Form.Control type="name" ref={nameRef} required />
+            </Form.Group>
+            <Form.Group id="phone">
+              <Form.Label>Phone No</Form.Label>
+              <Form.Control type="phone" ref={phoneRef} required />
+            </Form.Group>
+            <Form.Group id="dob">
+              <Form.Label>DOB</Form.Label>
+              <Form.Control type="date" ref={dobRef} required />
             </Form.Group>
 
             <Form.Group id="password">
