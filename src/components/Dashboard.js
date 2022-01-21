@@ -20,9 +20,10 @@ export default function Dashboard() {
   }
 
   return (
-    <div className="row">
+    <div className="row" style={{ width: "600px" }}>
       <div className="col-md-4">
         <h2>Users List</h2>
+        <li>{currentUser.email}</li>
       </div>
       <div className="col-md-8">
         <Card>
